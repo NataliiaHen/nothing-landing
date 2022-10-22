@@ -1,60 +1,41 @@
 .testimonials {
-  &__item {
-    margin-bottom: 48px;
-
-    &:last-child {
-        margin-bottom: 0;
+  &__box {
+    @include onTablet {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
     }
+  }
 
-    @include onDesktop {
+  &__title {
+    margin-bottom: 32px;
+    @include testimonial-width;
+    @extend %title;
+    text-align: left;
+
+    @include onTablet {
       margin-bottom: 0;
     }
   }
-}
 
-.testimonial {
-  &__photo-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      column-gap: 24px;
-
-      margin-bottom: 28px;
-
-      @include onDesktop {
-        margin-bottom: 32px;
-      }
+  &__content {
+    @include testimonial-width;
   }
-  &__photo {
-      grid-column:  2 / 4;
-      width: 100%;
-      border-radius: 50%;
+  
+  &__advantage-list {
+    list-style: none;
   }
 
-  &__name {
-    margin-bottom: 0 0 4px;
-
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
-    text-align: center;
+  &__advantage {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
 
-  &__role {
-  margin-bottom: 0 0 4px;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 27px;
-  text-align: center;
-  color: #9FADC2;  
+  &__text {
+    max-width: 410px;
+    margin-top: 40px;
+    font-weight: 400;
+    line-height: 27px;
   }
-
-  &__about {
-    text-align: center;
-  }
-}
-
-.link {
-  color: $colorBlue;
-  text-decoration: none;
 }

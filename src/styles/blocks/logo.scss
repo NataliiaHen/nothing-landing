@@ -1,9 +1,13 @@
 .logo {
   &__image {
-    height: 48px;
+    height: 17px;
+
+    @include onTablet {
+      height: 24px;
+    }
 
     @include onDesktop {
-      height: 80px;
+      height: 24px;
     }
   }
 }
