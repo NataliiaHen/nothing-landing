@@ -33,6 +33,12 @@
   &__img {
     max-height: 277px;
     width: 100%;
+    transform: scale(1);
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     @include onTablet {
       max-height: 392px;

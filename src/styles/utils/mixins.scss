@@ -1,0 +1,27 @@
+@mixin onDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 744px) {
+    @content;
+  }
+}
+
+@mixin testimonial-width {
+  @include onTablet {
+    width: $testimonialTabWidth;
+  }
+
+  @include onDesktop {
+    width: $testimonialDescWidth;
+  }
+}
+
+@mixin top-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -2,6 +2,10 @@
   &__image {
     height: 17px;
 
+    &:hover {
+      transform: scale(1.1);
+    }
+
     @include onTablet {
       height: 24px;
     }

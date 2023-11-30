@@ -4,8 +4,10 @@
   box-sizing: border-box;
 }
 
-@import "./variables";
-@import "./mixins";
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+@import "./utils/extends.scss";
+@import "./utils/transition-all.scss";
 
 @import "./blocks/page";
 @import "./blocks/container";
@@ -14,7 +16,7 @@
 @import "./blocks/header";
 @import "./blocks/menu";
 @import "./blocks/about";
-@import "./blocks/views";
+@import "./blocks/products";
 @import "./blocks/button";
 @import "./blocks/testimonials";
 @import "./blocks/form-field";
