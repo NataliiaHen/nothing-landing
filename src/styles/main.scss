@@ -1,24 +1,19 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-@import "./utils/variables.scss";
-@import "./utils/mixins.scss";
-@import "./utils/extends.scss";
-@import "./utils/transition-all.scss";
-
+@import "./utils/variables";
+@import "./utils/normalize";
+@import "./utils/mixins";
+@import "./utils/extends";
 @import "./blocks/page";
-@import "./blocks/container";
 @import "./blocks/logo";
-@import "./blocks/icon";
+@import "./blocks/main";
+@import "./blocks/container";
 @import "./blocks/header";
+@import "./blocks/icon";
 @import "./blocks/menu";
-@import "./blocks/about";
-@import "./blocks/products";
+@import "./blocks/recommended";
+@import "./blocks/product";
+@import "./blocks/categories";
 @import "./blocks/button";
-@import "./blocks/testimonials";
-@import "./blocks/form-field";
-@import "./blocks/contact";
+@import "./blocks/about-us";
+@import "./blocks/contact-us";
+@import "./blocks/form";
 @import "./blocks/footer";

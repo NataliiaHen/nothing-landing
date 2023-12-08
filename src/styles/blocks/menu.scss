@@ -1,67 +1,69 @@
 .menu {
-  background-color: #e8eff9;
+  overflow: auto;
+  background-color: $menu-bg-color;
 
   &__content {
+    position: relative;
+    box-sizing: border-box;
     height: 100vh;
-    padding: $headerTopMobPadding 0;
-
-    @include onTablet {
-    padding: $headerTopTabPadding 0;
-    }
   }
 
   &__top {
-    margin-bottom: 52px;
     @include top-actions;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin-bottom: 32px;
+
+    @include onTablet {
+      margin-bottom: 56px;
+    }
   }
 
   &__list {
-    list-style: none;
-    margin: 0 0 40px;
-  }
-
-  &__item {
-    width: max-content;
-    padding-bottom: 8px;
-    border-bottom: 1px solid transparent;
-
-    &:not(:last-child) {
-      margin-bottom: 24px;
-    }
-
-    @include onDesktop {
-      &:hover {
-        border-color: $dark;
-        transition: border-color 0.5s;
-      }
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 48px;
   }
 
   &__link {
-    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid transparent;
+
     font-size: 22px;
-    line-height: 22px;
+    font-weight: 700;
+    line-height: 100%;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    color: inherit;
+    color: $main-text-color;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 1px solid $main-text-color;
+    }
   }
 
   &__call {
     display: block;
     width: max-content;
-    line-height: 27px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    color: $main-text-color;
     text-decoration: none;
-    color: inherit;
 
     &--phone {
       margin-bottom: 16px;
-
     }
 
     &--action {
       padding-bottom: 8px;
-      border-bottom: 1px solid $dark;
+      border-bottom: 1px solid $main-text-color;
     }
   }
 }

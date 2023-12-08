@@ -1,17 +1,14 @@
 .logo {
   &__image {
-    height: 17px;
-
-    &:hover {
-      transform: scale(1.1);
-    }
+    height: 16px;
+    transform: scale(1);
 
     @include onTablet {
       height: 24px;
     }
 
-    @include onDesktop {
-      height: 24px;
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }

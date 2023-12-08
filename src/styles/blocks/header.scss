@@ -1,5 +1,5 @@
 .header {
-  background-image: url(../images/header.jpg);
+  background-image: url(../images/header.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,14 +9,14 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    padding: $headerTopMobPadding 0 94px;
+    padding-bottom: 40px;
 
     @include onTablet {
-      padding: $headerTopTabPadding 0 40px;
+      padding-bottom: 65px;
     }
 
     @include onDesktop {
-      padding-bottom: 64px;
+      padding-bottom: 92px;
     }
   }
 
@@ -27,7 +27,11 @@
   &__actions {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 24px;
+
+    @include onTablet {
+      gap: 32px;
+    }
   }
 
   &__call {
@@ -50,7 +54,7 @@
         pointer-events: none;
         transition: opacity linear 0.3s;
       }
-      
+
       &:hover {
         &::before {
           opacity: 1;
@@ -61,37 +65,16 @@
   }
 
   &__title {
-    font-style: italic;
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 100%;
-    letter-spacing: -1.5px;
+    transform: translateX(200%);
+    font-size: 36px;
+    transition: all $effect-duration-scroll;
 
     @include onTablet {
-      font-size: 40px;
-    }
-
-    @include onDesktop {
       font-size: 48px;
     }
 
-    &::before {
-      content: "";
-      display: block;
-      width: 32px;
-      height: 27px;
-
-      background-image: url(../images/sound-wave-small.svg);
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      margin-bottom: 16px;
-
-      @include onTablet {
-        width: 63px;
-        height: 76px;
-        background-image: url(../images/sound-waves.svg);
-      }
+    @include onDesktop {
+      font-size: 56px;
     }
   }
 }
